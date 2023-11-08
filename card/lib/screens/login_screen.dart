@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
             Image.asset(
               'assets/g.png',
               width: 600,
-              height: 300,
+              height: 250,
             ),
             SizedBox(height: 60),
             Padding(
