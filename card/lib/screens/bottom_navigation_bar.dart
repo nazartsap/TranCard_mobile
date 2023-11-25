@@ -1,6 +1,5 @@
-// bottom_navigation_bar.dart
-
 import 'package:flutter/material.dart';
+import 'profile_screen.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {
   @override
@@ -14,7 +13,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
 
   final List<Widget> _screens = [
     HomeScreen(),
-    Screen2(),
+    ProfileScreen(),
     Screen3(),
     Screen4(),
   ];
@@ -169,14 +168,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class Screen2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Экран 2'),
-    );
-  }
-}
+
 
 class Screen3 extends StatelessWidget {
   @override

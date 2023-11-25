@@ -1,5 +1,6 @@
+import 'package:card/screens/register_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'bottom_navigation_bar.dart';
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -61,6 +62,10 @@ class LoginScreen extends StatelessWidget {
             SizedBox(height: 60),
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BottomNavigationBarWidget()), // Ок
+                );
                 // Действие при нажатии на кнопку "Войти"
               },
               style: ElevatedButton.styleFrom(
@@ -87,6 +92,10 @@ class LoginScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterScreen()), // Ок
+                      );
                       // Действие при нажатии на "Зарегистрироваться"
                     },
                     child: Text(

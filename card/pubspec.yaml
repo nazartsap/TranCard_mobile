@@ -61,6 +61,7 @@ flutter:
     - assets/label_image.svg
     - assets/g.png
     - assets/profile.png
+    - assets/profile_icon.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
