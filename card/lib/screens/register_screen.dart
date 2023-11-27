@@ -5,6 +5,7 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -102,6 +103,7 @@ class RegisterScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

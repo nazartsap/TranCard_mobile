@@ -13,16 +13,16 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
 
   final List<Widget> _screens = [
     HomeScreen(),
-    ProfileScreen(),
     Screen3(),
     Screen4(),
+    ProfileScreen(),
   ];
 
   final List<IconData> _customIcons = [
-    Icons.star,
-    Icons.search,
-    Icons.favorite,
-    Icons.person,
+    Icons.directions_bus,
+    Icons.analytics_outlined,
+    Icons.account_balance_wallet,
+    Icons.account_circle_rounded,
   ];
 
   @override
@@ -37,19 +37,19 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(_customIcons[0]),
-            label: 'Экран 1',
+            label: 'Поездки',
           ),
           BottomNavigationBarItem(
             icon: Icon(_customIcons[1]),
-            label: 'Экран 2',
+            label: 'Статистика',
           ),
           BottomNavigationBarItem(
             icon: Icon(_customIcons[2]),
-            label: 'Экран 3',
+            label: 'Пополнить',
           ),
           BottomNavigationBarItem(
             icon: Icon(_customIcons[3]),
-            label: 'Экран 4',
+            label: 'Профиль',
           ),
         ],
       ),

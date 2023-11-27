@@ -36,25 +36,17 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {
-                  // Обработчик нажатия для второй кнопки
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 239, 241, 243),
-                  onPrimary: Colors.white,
-                  padding: EdgeInsets.all(16),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  minimumSize: Size(366, 74),
-                  fixedSize: Size(366, 74),
+              Ink(
+                decoration: ShapeDecoration(
+                  color: Colors.lightBlue, // Цвет при нажатии
+                  shape: CircleBorder(), // Форма кнопки
                 ),
-                child: Text(
-                  'Соглашения',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
+                child: InkWell(
+                  onTap: () {
+                    // Добавьте здесь обработчик нажатия на кнопку
+                  },
+                  child: Image.asset(
+                    'assets/button_privacy.png', // Путь к изображению кнопки
                   ),
                 ),
               ),
