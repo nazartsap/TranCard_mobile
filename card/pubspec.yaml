@@ -63,6 +63,8 @@ flutter:
     - assets/profile.png
     - assets/profile_icon.png
     - assets/button_privacy.png
+    - assets/button_help.png
+    - assets/button_security.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
