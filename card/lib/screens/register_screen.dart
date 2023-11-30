@@ -13,8 +13,9 @@ class RegisterScreen extends StatelessWidget {
             Image.asset(
               'assets/g.png',
               width: 400,
-              height: 250,
+              height: 230,
             ),
+
             SizedBox(height: 60),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -60,7 +61,7 @@ class RegisterScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 60),
+            SizedBox(height: 50),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -79,7 +80,7 @@ class RegisterScreen extends StatelessWidget {
               ),
               child: Text('Войти'),
             ),
-            SizedBox(height: 80),
+            SizedBox(height: 50),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 80.0),
               child: Row(

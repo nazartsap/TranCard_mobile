@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
-
+import 'login_screen.dart';
+import 'policy_screen.dart';
+import 'help_screen.dart';
 class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: 0.0),
+        padding: EdgeInsets.only(top: 50.0),
           child: Column(
             children: [
               Image.asset(
                 'assets/profile_icon.png',
                 width: 600,
-                height: 250,
+                height: 150,
               ),
+              Text(
+                'Андрей',
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+              ),
+              SizedBox(height: 50),
               Ink(
                 decoration: ShapeDecoration(
                   color: Colors.lightBlue, // Цвет при нажатии
@@ -37,7 +46,10 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 child: InkWell(
                   onTap: () {
-                    // Добавьте здесь обработчик нажатия на кнопку
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PolicyScreen()), // Ок
+                    );
                   },
                   child: Image.asset(
                     'assets/button_privacy.png',
@@ -54,7 +66,10 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 child: InkWell(
                   onTap: () {
-                    // Добавьте здесь обработчик нажатия на кнопку
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SupportScreen()), // Ок
+                    );
                   },
                   child: Image.asset(
                     'assets/button_help.png',
@@ -63,10 +78,13 @@ class ProfileScreen extends StatelessWidget {
                 ),
 
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 100),
               ElevatedButton(
                 onPressed: () {
-                  // Обработчик нажатия для четвертой кнопки
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Color.fromARGB(255, 68, 65, 255),

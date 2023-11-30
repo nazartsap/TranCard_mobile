@@ -22,7 +22,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
     Icons.directions_bus,
     Icons.analytics_outlined,
     Icons.account_balance_wallet,
-    Icons.account_circle_rounded,
+    Icons.settings,
   ];
 
   @override
@@ -49,7 +49,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(_customIcons[3]),
-            label: 'Профиль',
+            label: 'Настройки',
           ),
         ],
       ),
@@ -86,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        'Name',
+                        'Андрей',
                         style: TextStyle(
                           fontSize: 24,
                         ),

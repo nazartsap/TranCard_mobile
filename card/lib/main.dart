@@ -3,7 +3,8 @@ import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/bottom_navigation_bar.dart';
-
+import 'screens/policy_screen.dart';
+import 'screens/help_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -18,6 +19,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/register': (context) => RegisterScreen(),
         '/main': (context) => BottomNavigationBarWidget(),
+        '/policy': (context) => PolicyScreen(),
+        '/help': (context) => SupportScreen(),
       },
     );
   }
