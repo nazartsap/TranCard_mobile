@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'profile_screen.dart';
 
-class HomeScreen extends StatefulWidget {
+class CardScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<CardScreen> {
   String _userName = 'Андрей'; // Изначальное значение имени
 
   @override
@@ -60,6 +60,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+            SizedBox(height: 80),
+            Text(
+              'У вас нет карты',
+              style: TextStyle(
+                fontSize: 34,
+              ),
+            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -83,38 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                // Обработчик нажатия
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 68, 65, 255),
-                onPrimary: Colors.white,
-                padding: EdgeInsets.all(16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                minimumSize: Size(150, 50),
-                fixedSize: Size(297, 43),
-              ),
-              child: Text(
-                'Сканировать QR-код',
-                style: TextStyle(
-                  fontSize: 12,
-                ),
-              ),
-            ),
-            SizedBox(height: 30),
-            Padding(
-              padding: EdgeInsets.only(right: 200.0),
-              child: Text(
-                'Недавние поездки',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+
           ],
         ),
       ),

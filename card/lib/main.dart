@@ -6,6 +6,7 @@ import 'screens/bottom_navigation_bar.dart';
 import 'screens/policy_screen.dart';
 import 'screens/help_screen.dart';
 import 'screens/profile_screen.dart';
+import 'screens/card_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         '/policy': (context) => PolicyScreen(),
         '/help': (context) => SupportScreen(),
         '/profile': (context) => ProfileScreen(),
+        '/card': (context) => CardScreen(),
       },
     );
   }

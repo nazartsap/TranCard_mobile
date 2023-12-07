@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'settings_screen.dart';
 import 'home_screen.dart';
+import 'card_screen.dart';
 class BottomNavigationBarWidget extends StatefulWidget {
   @override
   _BottomNavigationBarWidgetState createState() =>
@@ -14,7 +15,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   final List<Widget> _screens = [
     HomeScreen(),
     Screen3(),
-    Screen4(),
+    CardScreen(),
     SettingsScreen(),
   ];
 
