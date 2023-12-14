@@ -21,8 +21,7 @@ class PolicyScreen extends StatelessWidget {
             style: TextStyle(fontSize: 16),
           ),
           SizedBox(height: 16),
-          Text(
-            '2. Сбор и использование данных',
+          Text('2. Сбор и использование данных',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 8),

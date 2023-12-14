@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'profile_screen.dart';
-
+import 'tariff_screen.dart';
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String _userName = 'Андрей'; // Изначальное значение имени
+  String _userName = '*****'; // Изначальное значение имени
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,10 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Обработчик нажатия
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TariffSelectionScreen()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(255, 68, 65, 255),

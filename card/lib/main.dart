@@ -1,3 +1,4 @@
+import 'package:card/screens/tariff_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
@@ -7,6 +8,7 @@ import 'screens/policy_screen.dart';
 import 'screens/help_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/card_screen.dart';
+import 'screens/tariff_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -25,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/help': (context) => SupportScreen(),
         '/profile': (context) => ProfileScreen(),
         '/card': (context) => CardScreen(),
+        '/tariff': (context) => TariffSelectionScreen(),
       },
     );
   }

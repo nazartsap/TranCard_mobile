@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   image_picker: ^0.8.4+1
+  carousel_slider: ^4.0.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -65,6 +66,9 @@ flutter:
     - assets/button_privacy.png
     - assets/button_help.png
     - assets/button_security.png
+    - assets/student.png
+    - assets/standart.png
+    - assets/preferential.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
