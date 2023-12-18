@@ -1,8 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'login_screen.dart';
 import 'policy_screen.dart';
 import 'help_screen.dart';
 class SettingsScreen extends StatelessWidget {
+
+  Future<void> _logout(BuildContext context) async {
+    // Удаление токена из SharedPreferences
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove('token');
+    await prefs.clear();
+
+    // Переход на экран логина
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,11 +95,8 @@ class SettingsScreen extends StatelessWidget {
               ),
               SizedBox(height: 100),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
-                  );
+                onPressed: () async {
+                  await _logout(context); // Вызов функции _logout при нажатии на кнопку
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Color.fromARGB(255, 68, 65, 255),
