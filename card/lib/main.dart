@@ -1,4 +1,5 @@
 import 'package:card/screens/card_selection_screen.dart';
+import 'package:card/screens/scanqr_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/login_screen.dart';
@@ -9,6 +10,7 @@ import 'screens/policy_screen.dart';
 import 'screens/help_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/card_screen.dart';
+import 'screens/scanqr_screen.dart';
 import 'screens/card_selection_screen.dart';
 void main() {
   runApp(MyApp());
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
             return CircularProgressIndicator(); // Лучше использовать загрузчик
           } else {
             bool isAuthenticated = snapshot.data!;
-            return isAuthenticated ? BottomNavigationBarWidget() : LoginScreen();
+            return isAuthenticated ? BottomNavigationBarWidget() : BottomNavigationBarWidget();
           }
         },
       ),
@@ -45,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => ProfileScreen(),
         '/card': (context) => CardScreen(),
         '/card': (context) => CardSelectionScreen(),
+        '/qr': (context) => QRCodeScanner(),
       },
     );
   }

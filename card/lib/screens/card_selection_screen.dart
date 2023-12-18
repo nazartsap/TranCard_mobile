@@ -73,6 +73,7 @@ class _CardSelectionScreenState extends State<CardSelectionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: Text('Выбор карты'),
       ),
       body: Container(

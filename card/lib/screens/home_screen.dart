@@ -8,7 +8,7 @@ import 'card_selection_screen.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'scanqr_screen.dart';
 class YourMainWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -192,7 +192,12 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // Обработчик нажатия
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => QRCodeScanner(),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(255, 68, 65, 255),
